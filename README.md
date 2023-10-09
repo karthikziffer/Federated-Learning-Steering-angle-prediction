@@ -42,6 +42,10 @@ pip install -r requirements.txt
 ```
 
 ## Data
+The [Steering angle classification Dataset](https://www.kaggle.com/datasets/roydatascience/training-car) was obtained from Kaggle. The dataset comprises 24K images and their corresponding steering angle. 
+
+
+
 
 ## Training 
 
