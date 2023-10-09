@@ -2,7 +2,6 @@
 
 <div align="center">
 <img src=https://github.com/karthikziffer/Federated-Learning-Steering-angle-prediction/assets/24503303/658bfaa4-64b2-4748-b25b-b039bc3db6b0" >
-<p>Steering wheel</p>
 </div>
 
 
