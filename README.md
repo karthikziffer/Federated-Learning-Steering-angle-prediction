@@ -46,7 +46,7 @@ The [Steering angle classification Dataset](https://www.kaggle.com/datasets/royd
 
 
 ## Training 
-The training was done on a federated manner, where the data is divided into two clients. The local model is trained in each of the clients and the trained local weights are sent to the server through the gRPC communication framework. The local weights get averaged in the server using the federated average algorithm and the global weights are sent to the clients. This way the training data remains in the client and a distributed model training happens in a federated manner. 
+The training process followed a federated approach, wherein the dataset was partitioned into two separate clients. Within each client, a local model was trained, and the resulting local weights were transmitted to the server via the gRPC communication framework. At the server, the local weights were aggregated using the federated average algorithm to obtain global weights, which were then distributed back to the clients. This approach allowed the training data to stay on the clients while enabling a distributed model training process with a federated approach.
 
 
 ## Evaluation
