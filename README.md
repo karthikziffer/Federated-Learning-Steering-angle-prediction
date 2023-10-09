@@ -16,6 +16,7 @@ This project leverages the Flower Framework for steering angle classification. T
 ## Table of Contents
 - [Installation](https://github.com/karthikziffer/Federated-Learning-Steering-angle-prediction/blob/main/README.md#installation)
 - [Data](https://github.com/karthikziffer/Federated-Learning-Steering-angle-prediction/blob/main/README.md#data)
+- [Model](https://github.com/karthikziffer/Federated-Learning-Steering-angle-prediction/blob/main/README.md#model)
 - [Training](https://github.com/karthikziffer/Federated-Learning-Steering-angle-prediction/blob/main/README.md#training)
 - [Evaluation](https://github.com/karthikziffer/Federated-Learning-Steering-angle-prediction/blob/main/README.md#evaluation)
 - [License](https://github.com/karthikziffer/Federated-Learning-Steering-angle-prediction/blob/main/README.md#license)
@@ -43,6 +44,28 @@ pip install -r requirements.txt
 ## Data
 The [Steering angle classification Dataset](https://www.kaggle.com/datasets/roydatascience/training-car) was obtained from Kaggle. The dataset comprises 24K images and their corresponding steering angle. 
 
+## Model
+
+1. Initialize the ResNet50 model with pre-trained weights from the ImageNet dataset to leverage its learned features.
+2. Freeze the first ten layers of the model, ensuring they remain unchanged during training to preserve essential characteristics.
+3. Enhance the model's capabilities by adding a straightforward dense layer, specifically designed for angle prediction tasks.
+4. This dense layer facilitates the regression value of the angle.
+5. Combining transfer learning with layer freezing and the addition of a dense layer creates a steering angle regression project.
+
+```
+        base_model = tf.keras.applications.ResNet50(
+            include_top=True,
+            weights="imagenet",
+            input_shape= (224, 224, 3)
+        )
+
+        for layer in base_model.layers[:10]:
+            layer.trainable = False
+
+        x = base_model.output
+        out_pred = tf.keras.layers.Dense(1)(x)
+        model = tf.keras.Model(inputs = base_model.input, outputs= out_pred)
+```
 
 ## Training 
 The training process followed a federated approach, wherein the dataset was partitioned into two separate clients. Within each client, a local model was trained, and the resulting local weights were transmitted to the server via the gRPC communication framework. At the server, the local weights were aggregated using the federated average algorithm to obtain global weights, which were then distributed back to the clients. This approach allowed the training data to stay on the clients while enabling a distributed model training process with a federated approach.
