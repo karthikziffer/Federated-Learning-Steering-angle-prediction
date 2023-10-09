@@ -51,7 +51,11 @@ The training process followed a federated approach, wherein the dataset was part
 
 ## Evaluation
 
+The data was partitioned into training, testing, and validation datasets. The evaluation of the trained model occurred at both the clients and the server using the following steps:
 
+1. Prior to sending their local weights, each client performed its own model evaluation.
+2. On the server side, all the local weights were aggregated, and the model was evaluated using the server's local data.
+3. The resulting global weights were sent back to the clients, and the evaluation process was repeated using these new global weights.
 
 
 
