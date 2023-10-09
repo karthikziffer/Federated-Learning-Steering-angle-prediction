@@ -45,9 +45,9 @@ pip install -r requirements.txt
 The [Steering angle classification Dataset](https://www.kaggle.com/datasets/roydatascience/training-car) was obtained from Kaggle. The dataset comprises 24K images and their corresponding steering angle. 
 
 
-
-
 ## Training 
+The training was done on a federated manner, where the data is divided into two clients. The local model is trained in each of the clients and the trained local weights are sent to the server through the gRPC communication framework. The local weights get averaged in the server using the federated average algorithm and the global weights are sent to the clients. This way the training data remains in the client and a distributed model training happens in a federated manner. 
+
 
 ## Evaluation
 
