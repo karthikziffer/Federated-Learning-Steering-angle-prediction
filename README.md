@@ -14,11 +14,11 @@ This project leverages the Flower Framework for steering angle classification. T
 - Efficient model training and evaluation.
 
 ## Table of Contents
-- Installation
-- Data
-- Training
-- Evaluation
-- License
+- [Installation](https://github.com/karthikziffer/Federated-Learning-Steering-angle-prediction/blob/main/README.md#installation)
+- [Data](https://github.com/karthikziffer/Federated-Learning-Steering-angle-prediction/blob/main/README.md#data)
+- [Training](https://github.com/karthikziffer/Federated-Learning-Steering-angle-prediction/blob/main/README.md#training)
+- [Evaluation](https://github.com/karthikziffer/Federated-Learning-Steering-angle-prediction/blob/main/README.md#evaluation)
+- [License](https://github.com/karthikziffer/Federated-Learning-Steering-angle-prediction/blob/main/README.md#license)
 
 
 ## Installation
