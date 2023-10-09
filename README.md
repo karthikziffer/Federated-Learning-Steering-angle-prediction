@@ -7,3 +7,9 @@
 
 ## Overview
 This project leverages the Flower Framework for steering angle classification. The Flower Framework is a powerful tool for developing and fine-tuning machine learning models to predict steering angles in autonomous vehicles. Whether you are building a self-driving car or working on a related research project, this framework provides the foundation you need.
+
+## Features
+Flower framework for federated learning.
+Steering angle prediction for autonomous vehicles.
+Efficient model training and evaluation.
+
