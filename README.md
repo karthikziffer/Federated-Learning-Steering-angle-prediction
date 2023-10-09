@@ -13,3 +13,43 @@ This project leverages the Flower Framework for steering angle classification. T
 - Steering angle prediction for autonomous vehicles.
 - Efficient model training and evaluation.
 
+## Table of Contents
+- Installation
+- Data
+- Training
+- Evaluation
+- Contributing
+- License
+
+
+## Installation
+The packages are installed using pip package manager and python version is 3.9
+
+```
+hydra-core==1.3.2
+flwr==1.4.0
+keras==2.12.0
+numpy==1.23.5
+omegaconf==2.3.0
+tensorflow==2.12.0
+mlflow==2.5.0
+```
+
+Install the pip packages from requirements.txt using the below command
+
+```
+pip install -r requirements.txt
+```
+
+## Data
+
+## Training 
+
+## Evaluation
+
+
+
+
+
+
+
